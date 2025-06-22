@@ -1,14 +1,8 @@
 # Project Setup
 
-In Ubuntu 20.04. the project raise the following error:
-```
-Note: This error originates from the build backend, and is likely not a problem with poetry but one of the following issues with asyncpg (0.29.0)
+## Version
 
-  - not supporting PEP 517 builds
-  - not specifying PEP 517 build requirements correctly
-  - the build requirements are incompatible with your operating system or Python version
-  - the build requirements are missing system dependencies (eg: compilers, libraries, headers)
-```
+The steps described in this document were tested using Ubuntu LTS >= 22. We strongly recommend the same setup is used when configuring and running the project.
 
 ## Pyenv
 
@@ -76,7 +70,7 @@ Then, for a local test environment, you simply run `just migrate` after composin
 
 ## Populate database for testing
 
-Most of our models have a corresponding seed script to generate some test data. To run the seed script, use `poetry run python galp/seed.py` from the root project folder.
+Most of our models have a corresponding seed script to generate some test data. To run the seed script, use `just seed` from the root project folder.
 
 ## Run
 
